@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">project</string>
+    <string-array name="qna_categories">
+        <item>지원</item>
+        <item>예약</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="qna_visibility">
+        <item>공개</item>
+        <item>비공개</item>
+    </string-array>
+</resources>

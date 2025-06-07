@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리 지원서"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- 기본 정보 -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 학번 -->
+        <EditText
+            android:id="@+id/etStudentId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="학번"
+            android:inputType="text"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 학과 -->
+        <EditText
+            android:id="@+id/etDepartment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="학과"
+            android:inputType="text"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 생년월일 -->
+        <EditText
+            android:id="@+id/etBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="생년월일 (예: 2004-07-27)"
+            android:inputType="date"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 전화번호 -->
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="전화번호"
+            android:inputType="phone"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 이메일 -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이메일"
+            android:inputType="textEmailAddress" />
+
+        <!-- 동아리 선택 -->
+        <TextView
+            android:id="@+id/tvClubSelectLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지원 동아리"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerClubs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <!-- 지원 동기 -->
+        <EditText
+            android:id="@+id/etMotivation"
+            android:hint="지원 동기"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:background="@drawable/rounded_border_gray" />
+
+        <!-- 각오 -->
+        <EditText
+            android:id="@+id/etPlan"
+            android:hint="지원 후 각오"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:background="@drawable/rounded_border_gray" />
+
+        <!-- 파일 첨부 -->
+        <Button
+            android:id="@+id/btnUploadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이력서 / 첨부파일 업로드"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white" />
+
+        <!-- 마감 안내 -->
+        <TextView
+            android:id="@+id/tvDeadlineNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="※ 마감일 이후에는 수정/삭제가 불가능합니다."
+            android:textColor="@android:color/holo_red_dark"
+            android:paddingTop="16dp" />
+
+        <!-- 제출 버튼 -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="제출하기"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

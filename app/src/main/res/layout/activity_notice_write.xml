@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/union_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 제목 입력 -->
+        <EditText
+            android:id="@+id/etNoticeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="공지 제목"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_border_gray"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 내용 입력 -->
+        <EditText
+            android:id="@+id/etNoticeContent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="공지 내용"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:background="@drawable/rounded_border_gray"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 첨부파일 버튼 -->
+        <Button
+            android:id="@+id/btnAttachFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="첨부파일 추가"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 상단 고정 여부 -->
+        <CheckBox
+            android:id="@+id/checkFixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공지 상단 고정"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 작성 버튼 -->
+        <Button
+            android:id="@+id/btnSubmitNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="공지 등록"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

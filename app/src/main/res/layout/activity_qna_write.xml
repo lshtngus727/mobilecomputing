@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 제목 -->
+        <EditText
+            android:id="@+id/etQnaTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="제목"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 카테고리 선택 -->
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 작성자 (자동 입력) -->
+        <EditText
+            android:id="@+id/etWriter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="작성자"
+            android:enabled="false"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 질문 내용 -->
+        <EditText
+            android:id="@+id/etQnaContent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top"
+            android:hint="내용을 입력하세요"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 파일 첨부 -->
+        <Button
+            android:id="@+id/btnAttachFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="파일 첨부"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 공개여부 -->
+        <Spinner
+            android:id="@+id/spinnerVisibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 비밀번호 (비공개 시 입력) -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호 (비공개 글일 경우)"
+            android:inputType="numberPassword"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 등록 버튼 -->
+        <Button
+            android:id="@+id/btnSubmitQna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="질문 등록"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="251dp"
+        android:layout_height="261dp"
+        android:layout_gravity="center"
+        android:contentDescription="로고"
+        android:src="@drawable/logo_always" />
+
+    <!-- 안내 텍스트 -->
+
+    <!-- 동아리 선택 Spinner -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="동아리 지원할 동아리를 선택하세요"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerClubSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 동아리별 지원 마감일 표시 -->
+    <TextView
+        android:id="@+id/tvDeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="지원 마감일: 선택된 동아리에 따라 표시됩니다."
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 버튼: 지원서 쓰기 -->
+    <Button
+        android:id="@+id/btnWriteApplication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:text="지원서 쓰기" />
+
+    <!-- 버튼: 지원현황 보기 -->
+
+    <!-- 버튼: 동아리 확인하기 (분과별 리스트 이동용) -->
+    <Button
+        android:id="@+id/btnGoToStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="지원현황 보기" />
+
+    <Button
+        android:id="@+id/btnCheckClubs"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="동아리 확인하기" />
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 동아리 선택 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리 선택"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinnerSelectClub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 임원 목록 (동적으로 추가됨) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="임원 명단"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/layoutLeadersContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 임원 추가 버튼 -->
+        <Button
+            android:id="@+id/btnAddLeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="임원 추가"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 등록 버튼 -->
+        <Button
+            android:id="@+id/btnSubmitLeaders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="명단 등록/수정"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

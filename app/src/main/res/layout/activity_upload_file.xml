@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 자료 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자료 제목"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/etFileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="예: 5월 회비 사용 내역"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 카테고리 선택 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 동아리 선택 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리 선택"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinnerClub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 첨부 파일 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="첨부파일"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvSelectedFile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="선택된 파일 없음"/>
+
+            <Button
+                android:id="@+id/btnSelectFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="파일 선택"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- 회비 사용 내역 체크 (정기서류일 때만 사용) -->
+        <CheckBox
+            android:id="@+id/checkNoticeAlso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회비 사용 내역으로 게시판에도 올리기"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 등록 버튼 -->
+        <Button
+            android:id="@+id/btnUploadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="자료 등록"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

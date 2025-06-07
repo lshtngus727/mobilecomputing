@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:backgroundTint="@color/union_bg">
+
+    <!-- 제목 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공지사항"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 글쓰기 버튼 (관리자만 보이게 처리 예정) -->
+    <Button
+        android:id="@+id/btnWriteNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공지 작성"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"
+        android:layout_gravity="end"
+        android:visibility="gone" /> <!-- 관리자인 경우에만 visible -->
+
+    <!-- 공지 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNotices"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+</LinearLayout>
+</LinearLayout>

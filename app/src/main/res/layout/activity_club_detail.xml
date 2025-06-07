@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 동아리 이름 및 분과 -->
+        <TextView
+            android:id="@+id/tvClubName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B.P.M (공연분과)"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_700"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 활동 사진 -->
+        <ImageView
+            android:id="@+id/imgPhoto1"
+            android:layout_width="match_parent"
+            android:layout_height="307dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/club" />
+
+
+        <!-- 동아리 소개 -->
+        <TextView
+            android:id="@+id/tvClubIntroLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리 소개"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvClubIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BPM은 Bouncing People for Music의 약자로 힙합, 일렉트로닉, 올카인드 디제잉을 기반으로 한 파티플랜, 친목 등을 주로 하는 한밭대학교 디제잉 크루입니다."
+            android:layout_marginBottom="16dp" />
+
+        <!-- 동아리 임원 정보 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="동아리 임원"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLeaderInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이동근 (회장) / 010-5255-3176"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 지원 조건 및 회비 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리 신청 정보"
+            android:textSize="20sp"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvApplyInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회비: 2만원(학기당) \n지원자격: 한밭대학교 학생 \n인스타 참고 \n상시모집"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 지원 버튼 -->
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="지원하기"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 공지사항 섹션 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공지사항"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNotices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 달력 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리 일정"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 요일 라벨 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:text="일" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:text="월" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:text="화" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:text="수" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:text="목" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:text="금" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:text="토" />
+        </LinearLayout>
+
+        <!-- 달력 날짜 셀 영역 (7 x 6 = 42) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendarRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:overScrollMode="never" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

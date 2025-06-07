@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 질문 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="질문 제목"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvQuestionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="예시 질문입니다"
+            android:background="@drawable/rounded_border_gray"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 질문 내용 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="질문 내용"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvQuestionContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="질문 내용이 여기에 표시됩니다."
+            android:background="@drawable/rounded_border_gray"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 첨부파일 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="첨부파일"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btnDownloadAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="파일 다운로드"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 답변 작성 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="답변 입력"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etReplyContent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top"
+            android:hint="답변을 입력하세요"
+            android:inputType="textMultiLine"
+            android:background="@drawable/rounded_border_gray"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 등록 버튼 -->
+        <Button
+            android:id="@+id/btnSubmitReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="답변 등록"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/union_bg"
+    android:backgroundTint="@color/union_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- 📌 주요 기능 버튼들 -->
+        <GridLayout
+            android:id="@+id/layoutTopButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:alignmentMode="alignMargins"
+            android:rowCount="2"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnNotice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="공지사항"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnCalendar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="캘린더"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnFiles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="자료실"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="자료등록"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnQnA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="QnA"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnReservation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="예약하기"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white" />
+        </GridLayout>
+
+        <!-- ✏️ 소개 텍스트 -->
+        <TextView
+            android:id="@+id/tvUnionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="국립한밭대학교 제 40대 총동아리연합회 Always"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_700"
+            android:layout_marginBottom="16dp" />
+        <TextView
+            android:id="@+id/tvUnionIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="국립한밭대학교 제 40대 Always 총동아리 연합회는 동아리를 사랑하는 학생들을 위하여 동아리들의 발전과 긍정적인 변화를 추구하는 자치기구입니다. 동아리의 의미와 가치를 잊지 않으며 동아리 활동을 향한 초심을 유지하도록 노력해 동아리들의 성장의 발판이 되는 총동아리 연합회가 되겠습니다."
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="24dp"/>
+
+
+        <!-- 🧭 심볼마크 / 사진들 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="심볼마크"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_700"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="start" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <!-- 첫 번째 이미지 (logo_always) -->
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/logo_always"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="12dp" />
+
+            <!-- 두 번째 이미지 (story_symbol) -->
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/sample_" />
+
+        </LinearLayout>
+
+        <!-- 이미지 아래 설명 텍스트 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Always의 심볼마크는 방향성을 나타내는 나침반과 책을 형상화하여..."
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="24dp" />
+
+
+        <!-- 👥 조직도 이미지 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="조직도"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_700"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="start" />
+
+        <ImageView
+            android:id="@+id/imgOrgChart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sample_orgchart"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

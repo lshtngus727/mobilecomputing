@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/union_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그인"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- 총동연 로고 -->
+
+        <!-- 제목 -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="234dp"
+            android:layout_height="191dp"
+            android:layout_gravity="center"
+            android:contentDescription="로고"
+            android:src="@drawable/logo_always" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="국립한밭대학교 제 40대 총동아리연합회"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:paddingTop="8dp" />
+
+        <!-- 공지사항 팝업 버튼 -->
+        <Button
+            android:id="@+id/btnNoticePopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공지사항 바로가기"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp" />
+
+        <!-- 메뉴 버튼들 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp">
+
+            <Button
+                android:id="@+id/btnIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray_light"
+                android:textColor="#ff000000"
+                android:text="총동아리연합회 소개" />
+
+            <Button
+                android:id="@+id/btnClubList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray_light"
+                android:textColor="#ff000000"
+                android:text="동아리 보기" />
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray_light"
+                android:textColor="#ff000000"
+                android:text="지원하기" />
+
+            <Button
+                android:id="@+id/btnResources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray_light"
+                android:textColor="#ff000000"
+                android:text="자료실" />
+
+            <Button
+                android:id="@+id/btnQna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray_light"
+                android:textColor="#ff000000"
+                android:text="마이페이지" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

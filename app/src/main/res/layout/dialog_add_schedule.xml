@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 일정 제목 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일정 제목"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etScheduleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="예: 동아리 대표자 회의"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 날짜 추가 버튼 -->
+    <Button
+        android:id="@+id/btnAddDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="날짜 추가"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/teal_700" />
+
+    <!-- 선택된 날짜 리스트 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택한 날짜들"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp" />
+
+    <ListView
+        android:id="@+id/listSelectedDates"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <!-- 등록 버튼 -->
+    <Button
+        android:id="@+id/btnSubmitSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="등록"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@android:color/white" />
+</LinearLayout>
+</LinearLayout>

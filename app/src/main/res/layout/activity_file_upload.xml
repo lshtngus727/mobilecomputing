@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 제목 -->
+        <EditText
+            android:id="@+id/etFileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="자료 제목"
+            android:background="@drawable/rounded_border_gray"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 파일 선택 -->
+        <Button
+            android:id="@+id/btnSelectFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="파일 선택"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 등록 버튼 -->
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="자료 등록"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

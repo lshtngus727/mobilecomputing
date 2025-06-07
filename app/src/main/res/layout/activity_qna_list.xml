@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_day_cell">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 제목 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QnA 게시판"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- 글쓰기 버튼 (학생, 관리자 공통) -->
+    <Button
+        android:id="@+id/btnWriteQna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="질문 작성"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@android:color/white"
+        android:layout_gravity="end"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- QnA 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewQna"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+</LinearLayout>

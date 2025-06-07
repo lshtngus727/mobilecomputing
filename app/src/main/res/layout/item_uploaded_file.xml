@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/rounded_border_gray"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tvFileTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5월 회비 사용내역"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvUploaderClub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="업로드 동아리: TENZ"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tvUploadedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025-06-01"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다운로드"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

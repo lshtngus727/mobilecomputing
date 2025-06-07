@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/rounded_border_gray">
+
+    <TextView
+        android:id="@+id/tvQnaTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="질문 제목"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvQnaWriter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="작성자"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvQnaDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="작성일"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp" />
+</LinearLayout>

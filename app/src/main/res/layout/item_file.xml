@@ -1,0 +1,39 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="@color/union_bg">
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/tvFileTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="파일 제목"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- 등록일 -->
+    <TextView
+        android:id="@+id/tvFileDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024-06-06"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:layout_marginStart="8dp" />
+
+    <!-- 다운로드 아이콘 -->
+    <ImageView
+        android:id="@+id/iconDownload"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_download"
+        android:layout_marginStart="8dp" />
+</LinearLayout>
