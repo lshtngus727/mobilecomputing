@@ -44,11 +44,6 @@
                     android:id="@+id/tvMajorStudentId"
                     android:text="컴퓨터공학과 / 20210000" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tvPhone"
-                    android:text="010-1234-5678" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -142,10 +137,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="임원 명단 설정"
-                android:visibility="gone"
-                android:backgroundTint="@android:color/holo_blue_dark"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="8dp"/>
+                android:backgroundTint="@color/teal_700"
+                android:visibility="gone" />
         </LinearLayout>
 
         <!-- 회원탈퇴 -->

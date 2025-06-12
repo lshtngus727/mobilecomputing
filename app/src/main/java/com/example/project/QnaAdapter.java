@@ -2,10 +2,13 @@ package com.example.project;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,17 +38,28 @@ public class QnaAdapter extends RecyclerView.Adapter<QnaAdapter.QnaViewHolder> {
         holder.tvWriter.setText("작성자: " + qna.getWriter());
         holder.tvDate.setText("날짜: " + qna.getDate());
 
-        // 🔜 클릭 시 상세보기 화면으로 이동
+        // QnA 항목 클릭 시 처리
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, QnaReplyActivity.class);  // QnaReplyActivity로 이동
+            SharedPreferences pref = context.getSharedPreferences("UserInfo", Context.MODE_PRIVATE);
+            String role = pref.getString("role", "비회원");
+
+            Intent intent;
+            if ("관리자".equals(role)) {
+                intent = new Intent(context, QnaReplyActivity.class);
+            } else {
+                Toast.makeText(context, "상세보기 기능은 준비 중입니다.", Toast.LENGTH_SHORT).show();
+                return; // 관리자만 이동
+            }
+
             intent.putExtra("title", qna.getTitle());
             intent.putExtra("content", qna.getContent());
-            intent.putExtra("writer", qna.getWriter());
-            intent.putExtra("date", qna.getDate());
             intent.putExtra("hasAttachment", qna.hasAttachment());
+
             context.startActivity(intent);
         });
+
     }
+
 
     @Override
     public int getItemCount() {

@@ -5,6 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
+    <Button
+        android:id="@+id/btnGoToUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서류 등록하기"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone" />
 
     <!-- 상단 카테고리 필터 -->
     <Spinner

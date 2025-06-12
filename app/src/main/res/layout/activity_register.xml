@@ -29,6 +29,7 @@
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPersonName"
             android:hint="이름"
             android:layout_marginBottom="12dp" />
 
@@ -40,11 +41,17 @@
             android:inputType="number"
             android:layout_marginBottom="12dp" />
 
-        <EditText
-            android:id="@+id/etDepartment"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="학과 선택"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDepartment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="학과"
             android:layout_marginBottom="12dp" />
 
         <EditText

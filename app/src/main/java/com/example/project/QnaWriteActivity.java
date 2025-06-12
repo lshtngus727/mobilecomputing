@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -25,7 +26,10 @@ public class QnaWriteActivity extends AppCompatActivity {
         btnSubmitQna = findViewById(R.id.btnSubmitQna);
         btnAttachFile = findViewById(R.id.btnAttachFile);
 
-        // 스피너 데이터 설정
+        SharedPreferences pref = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        String role = pref.getString("role", "비회원");
+
+
         ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,
                 R.array.qna_categories, android.R.layout.simple_spinner_item);
         categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -36,16 +40,13 @@ public class QnaWriteActivity extends AppCompatActivity {
         visibilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerVisibility.setAdapter(visibilityAdapter);
 
-        // 기본 사용자 정보 (나중에 로그인 정보로 자동 입력 예정)
-        etWriter.setText("20251234");
+        etWriter.setText("20251234"); // 임시 사용자 ID
 
         btnSubmitQna.setOnClickListener(v -> {
             String title = etTitle.getText().toString();
             String content = etContent.getText().toString();
-            String writer = etWriter.getText().toString();
             String category = spinnerCategory.getSelectedItem().toString();
             String visibility = spinnerVisibility.getSelectedItem().toString();
-            String password = etPassword.getText().toString();
             boolean isPrivate = visibility.equals("비공개");
 
             if (title.isEmpty() || content.isEmpty()) {
@@ -53,9 +54,9 @@ public class QnaWriteActivity extends AppCompatActivity {
                 return;
             }
 
-            // 🔧 임시 저장 로직
+            // 🔧 저장 로직 (Firebase or SQLite 이후 구현 예정)
             Toast.makeText(this, "질문 등록 완료 (임시)", Toast.LENGTH_SHORT).show();
-            finish(); // 돌아가기
+            finish();
         });
 
         btnAttachFile.setOnClickListener(v -> {

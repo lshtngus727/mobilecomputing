@@ -34,7 +34,20 @@
         <activity android:name=".CalendarActivity" />
         <activity android:name=".FileUploadActivity" />
         <activity android:name=".QnaListActivity" />
-        <activity android:name=".ReservationActivity" />
+        <activity android:name=".AddFileActivity" />
+        <activity android:name=".UploadedFilesActivity" />
+        <activity android:name=".SubmitReservationActivity" />
+        <activity android:name=".ReservationListActivity" />
+        <activity android:name=".QnaWriteActivity" />
+        <activity android:name=".QnaReplyActivity" />
+        <activity android:name=".ClubListActivity" />
+        <activity android:name=".ClubDetailActivity" />
+        <activity android:name=".ApplySelectActivity" />
+        <activity android:name=".ApplyFormActivity" />
+        <activity android:name=".CheckStatusActivity" />
+        <activity android:name=".LeaderManageActivity"/>
+        <activity android:name=".ScheduleAddActivity" />
+
 
     </application>
 

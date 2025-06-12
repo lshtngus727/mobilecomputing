@@ -40,6 +40,16 @@
                 android:textSize="14sp"
                 android:background="@android:color/transparent"
                 android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그아웃"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
         </LinearLayout>
 
         <!-- 총동연 로고 -->

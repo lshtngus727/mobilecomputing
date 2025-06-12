@@ -6,7 +6,7 @@ public class Qna {
     private String writer;
     private String category;
     private boolean isPrivate;
-    private String password;  // 비공개 시 비밀번호
+    private String password;
     private String date;
     private boolean hasAttachment;
 
@@ -22,7 +22,6 @@ public class Qna {
         this.hasAttachment = hasAttachment;
     }
 
-    // getter
     public String getTitle() { return title; }
     public String getContent() { return content; }
     public String getWriter() { return writer; }

@@ -33,24 +33,29 @@ public class LoginActivity extends AppCompatActivity {
                 String inputPw = etLoginPassword.getText().toString().trim();
 
                 SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
-                String savedId = pref.getString("email", "");
+                String savedEmail = pref.getString("email", "");
+                String savedStudentId = pref.getString("studentId", ""); // 학번 가져오기
                 String savedPw = pref.getString("password", "");
                 String savedRole = pref.getString("role", "");
 
-                if (inputId.equals(savedId) && inputPw.equals(savedPw)) {
+                // 이메일 또는 학번이 일치하고, 비밀번호도 일치하면 로그인
+                boolean isIdMatched = inputId.equals(savedEmail) || inputId.equals(savedStudentId);
+                boolean isPwMatched = inputPw.equals(savedPw);
+
+                if (isIdMatched && isPwMatched) {
                     pref.edit().putBoolean("isLoggedIn", true).apply();
 
                     Toast.makeText(LoginActivity.this, savedRole + "님 로그인 성공", Toast.LENGTH_SHORT).show();
 
-                    // 메인 화면으로 이동
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
-                    Toast.makeText(LoginActivity.this, "로그인 실패: 아이디 또는 비밀번호 불일치", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "로그인 실패: 학번/이메일 또는 비밀번호 불일치", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
 
         tvGoToRegister.setOnClickListener(new View.OnClickListener() {
             @Override

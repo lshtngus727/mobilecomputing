@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,6 @@ public class FileListActivity extends AppCompatActivity {
         btnUploadFile = findViewById(R.id.btnUploadFile);
 
         fileList = new ArrayList<>();
-        // 임시 데이터
         fileList.add(new FileItem("2025년도 예산안", "2025-01-03"));
         fileList.add(new FileItem("2025년도 방침", "2025-03-01"));
 
@@ -40,15 +40,17 @@ public class FileListActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 관리자 여부에 따라 visibility 조정 (예: 관리자인 경우만 보이게)
-        if (isAdminUser()) {
+        // 사용자 권한에 따라 버튼 표시
+        if ("관리자".equals(getCurrentUserRole())) {
             btnUploadFile.setVisibility(View.VISIBLE);
+        } else {
+            btnUploadFile.setVisibility(View.GONE);
         }
     }
 
-    private boolean isAdminUser() {
-        // 테스트용 관리자 판단 로직 (true로 고정)
-        return true;
+    // ❗ 반드시 클래스 바깥에서 정의해야 함
+    private String getCurrentUserRole() {
+        SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
+        return pref.getString("role", "비회원");
     }
 }
-

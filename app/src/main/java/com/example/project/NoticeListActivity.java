@@ -29,13 +29,16 @@ public class NoticeListActivity extends AppCompatActivity {
         SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
         String role = pref.getString("role", "비회원");
 
-        if (role.equals("총동아리연합회")) {
+        // 관리자만 글쓰기 버튼 표시
+        if (role.equals("관리자")) {
             btnWriteNotice.setVisibility(View.VISIBLE);
+        } else {
+            btnWriteNotice.setVisibility(View.GONE);
         }
 
         btnWriteNotice.setOnClickListener(v -> {
             Intent intent = new Intent(NoticeListActivity.this, NoticeWriteActivity.class);
-            startActivityForResult(intent, 100); // 글쓰기 요청
+            startActivityForResult(intent, 100);
         });
 
         noticeList = new ArrayList<>();
@@ -47,7 +50,6 @@ public class NoticeListActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    // 글쓰기 결과 받기
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -60,7 +62,7 @@ public class NoticeListActivity extends AppCompatActivity {
             boolean hasAttachment = data.getBooleanExtra("hasAttachment", false);
 
             Notice newNotice = new Notice(title, content, date, isFixed, hasAttachment);
-            noticeList.add(0, newNotice); // 리스트 맨 위에 추가
+            noticeList.add(0, newNotice);
             adapter.notifyItemInserted(0);
             recyclerView.scrollToPosition(0);
         }

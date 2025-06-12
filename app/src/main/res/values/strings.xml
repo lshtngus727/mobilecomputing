@@ -10,4 +10,42 @@
         <item>공개</item>
         <item>비공개</item>
     </string-array>
+
+    <string-array name="departments">
+        <item>컴퓨터공학과</item>
+        <item>전자공학과</item>
+        <item>기계공학과</item>
+        <item>산업경영공학과</item>
+        <item>신소재공학과</item>
+        <item>화학생명공학과</item>
+        <item>창의융합학과</item>
+        <item>모바일융합공학과</item>
+        <item>반도체시스템공학과</item>
+        <item>응용소프트웨어학과</item>
+        <item>인공지능소프트웨어학과</item>
+        <item>정보통신공학과</item>
+        <item>지능미디어공학과</item>
+        <item>전기공학과</item>
+        <item>건설환경공학과</item>
+        <item>건축공학과</item>
+        <item>건축학과</item>
+        <item>산업디자인학과</item>
+        <item>도시공학과</item>
+        <item>생활디자인학과</item>
+        <item>시각영상디자인학과</item>
+        <item>공공행정학과</item>
+        <item>영어영문학과</item>
+        <item>일본어과</item>
+        <item>중국어과</item>
+        <item>경영회계학과</item>
+        <item>경제학과</item>
+        <item>융합경영학과</item>
+        <item>창업경영학과</item>
+        <item>회계세무학과</item>
+        <item>자율전공학부</item>
+        <item>공학건설학부</item>
+        <item>정보기술학부</item>
+        <item>인문사회경상학부</item>
+        <item>융합다전공학부</item>
+    </string-array>
 </resources>

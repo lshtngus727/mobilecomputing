@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.project"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.project"
@@ -35,6 +35,10 @@ android {
 
 
 dependencies {
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.activity:activity:1.8.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation ("com.google.firebase:firebase-auth:22.1.2")
     implementation(libs.appcompat)
     implementation(libs.material)
